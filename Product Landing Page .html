@@ -1,276 +1,234 @@
 <!DOCTYPE html>
 <html>
-<script>
-  $(document).ready(function() {
+    <style>@import url('https://fonts.googleapis.com/css?family=Chela+One');
 
-var nav = $("#nav-bar");
+            .header {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              position: fixed;
+              top: 0;
+              left: 0;
+              z-index: 9999;
+              width: 100%;
+              height: 60px;
+              background-color: white;
+              font-color: white;
+            }
+            #logo {
+              width: 300px;
+              padding: 0px 0px 0px 0px;
+            }
+            .leftnav {
+              flex-grow: 1; 
+            }
+            
+            
+            a {
+              padding: 1em;
+              text-decoration: none;
+              color: black;
+            }
+            
+            div {
+              border: 1px black;
+            }
+            
+            #header-img {
+              width: 50px;
+              margin-left: 50px;
+            }
+            
+            #about {
+              padding: 50px;
+              height: 840px;
+              background-color: black;
+              
+            }
+            
+            #id {
+              height: 500px;
+            }
+            
+            #choose {
+              height:400px;
+              background: black;
+              font-color: white;
+            }
+            
+            #features {
+              height: 600px;
+              background-color: black;
+            }
+            
+            #subscribe {
+              font-size: 50px;
+              color: white;
+              text-align: center;
+              margin-top: 50px;
+              
+            }
+            
+            footer {
+              text-align: center;
+              background-color: rgb(169,169,169);
+              height: 40px;
+              padding-top: 25px;
+              color: rgb(88,88,88);
+              font-size: 12px;
+            }
+            
+            #fusion {
+              font-family: Helveltica;
+              font-weight: strong;
+              font-size: 50px;
+              color: White;
+              text-align: center;
+            }
+            
+            .resp-container {
+                position: relative;
+                overflow: hidden;
+                padding-top: 56.25%;
+                padding-bottom: 20px;
+            }
+            
+            .resp-iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 80%;
+                border: 0;
+            }
+            
+            #video {
+              width:100%;
+            }
+            
+            form {
+              align-content: center;
+              text-align: center;
+              margin: 0 auto;
+              width: 500px;
+            }
+            
+            #email {
+              width: 450px;
+              height: 40px;
+              margin-right: 50px;
+              margin-bottom: 20px;
+              border-radius: 5px;
+            }
+            
+            #submit {
+            padding: 11px 21px 12px;
+            font-size: 19px;
+            background-color: crimson;
+            font-weight: bold;
+            text-shadow: 2px 2px #F36C8B;
+            color: #ffffff;
+            border-radius: 102px;
+            border: 2px solid #F36C8C;
+            cursor: pointer;
+            box-shadow: 0 2px 0 rgba(255, 255, 255, 0.6) inset;
+            }
+            
+            #features {
+              font-size: 3.5em;
+              text-align: center;
+              color: white;
+            }
+            
+            #id {
+              box-sizing: border-box;
+            }
+            
+            #col1 {
+              width: 50%;
+              float: left;
+              font-size: 25px;
+            }
+            
+            #col2{
+              width: 45%;
+              float: left;
+            }
+            
+            #decks {
+              height: auto;
+              max-width: 100%;
+            }
+            
+            @media (max-width: 600px) {
+              .header {
+                font-size: 10px;
+              }
+              
+              #subscribe {
+                font-size: 2em;
+              }
+              
+              #email {
+                width: 300px;
+              }
+              
+              form {
+                width: 320px;
+              }
+              
+              #about {
+                height: 500px;
+              }
+              
+              #features {
+                font-size: 2em;
+                height: 620px;
+              }
+              
+              #col1 {
+                font-size: 16px;
+                float: center;
+                width: 70%;
+                margin-left: 50px;
+              }
+              
+              #col2 {
+                margin-left: 100px;
+                magin-top: 10px;
+              }
+            }</style>
 
-$(window).scroll(function() {
-  var originalHeight = nav.outerHeight(true);
-  var scrollTopVal = $(this).scrollTop();
-  
-  if (scrollTopVal > originalHeight + 130) {
-    nav.css("position", "fixed");
-    nav.css("top", "0");
-  } else {
-    nav.css("position", "relative");
-  }
-})
-// once nav gets to top of page
-// change position to fixed css
-// once it gets back to where it originally was
-// change position to relative
-
-});
- src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Vast+Shadow" rel="stylesheet">
-</script>
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Vast+Shadow');
-
-header {
-  background-color: #131417;
-  align-content: stretch;
-}
-#nav-bar {
-  background-color: #131417;
-  width: 100%;
-  padding: 20px;
-  position: relative;
-  text-align: center;
-}
-
-#logo {
-  width: 200px;
-  padding: 30px 0px 0px 0px;
-}
-
-#header-img {
-  min-width: 400px;
-  width: 100%;
-  height: 100%;
-}
-.nav-link {
-  color: #E3D9BB;
-  padding: 30px;
-}
-
-..................
-a {
-  padding: 1em;
-  text-decoration: none;
-  color: black;
-}
-
-div {
-  border: 1px solid darkcyan;
-}
-
-#about {
-  padding: 50px;
-  height: 840px;
-  background-color: teal;
-  
-}
-
-#id {
-  height: 500px;
-}
-
-#choose {
-  height:400px;
-  background-color: cyan;
-}
-
-#features {
-  height: 600px;
-  background-color: darkcyan;
-}
-
-#subscribe {
-  font-size: 50px;
-  text-align: center;
-  margin-top: 50px;
-}
-
-footer {
-  text-align: center;
-  background-color: rgb(169,169,169);
-  height: 40px;
-  padding-top: 25px;
-  color: rgb(88,88,88);
-  font-size: 12px;
-}
-
-#fusion {
-  font-family: Helveltica;
-  font-weight: strong;
-  font-size: 50px;
-  color: White;
-  text-align: center;
-}
-
-.resp-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-    padding-bottom: 20px;
-}
-
-.resp-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-#video {
-  width:100%;
-}
-
-form {
-  align-content: center;
-  text-align: center;
-  margin: 0 auto;
-  width: 500px;
-}
-
-#email {
-  width: 450px;
-  height: 40px;
-  margin-right: 50px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-}
-
-#submit {
-padding: 11px 21px 12px;
-font-size: 19px;
-background-color: #F36C8B;
-font-weight: bold;
-text-shadow: 2px 2px #F36C8B;
-color: #ffffff;
-border-radius: 102px;
-border: 2px solid #F36C8C;
-cursor: pointer;
-box-shadow: 0 2px 0 rgba(255, 255, 255, 0.6) inset;
-}
-
-#prodate {
-  color: white;
-  text-align: center;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-#features {
-  font-size: 3.5em;
-  text-align: center;
-  color: white;
-}
-
-#id {
-  box-sizing: border-box;
-}
-
-#col1 {
-  width: 50%;
-  float: left;
-  font-size: 25px;
-}
-
-#col2{
-  width: 45%;
-  float: left;
-}
-
-#headphone {
-  height: auto;
-  max-width: 100%;
-}
-
-@media (max-width: 600px) {
-  .header {
-    font-size: 10px;
-  }
-  
-  #subscribe {
-    font-size: 2em;
-  }
-  
-  #email {
-    width: 300px;
-  }
-  
-  form {
-    width: 320px;
-  }
-  
-  #about {
-    height: 500px;
-  }
-  
-  #features {
-    font-size: 2em;
-    height: 620px;
-  }
-  
-  #col1 {
-    font-size: 16px;
-    float: center;
-    width: 70%;
-    margin-left: 50px;
-  }
-  
-  #col2 {
-    margin-left: 100px;
-    magin-top: 10px;
-  }
-}
-</style>
 <head>
-<title>Rum Product Landing Page</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Vast+Shadow" rel="stylesheet">
+  <title>Product Landing Page</title>
   </head>
 
 <div id="page-wrapper">
- 
-<body>
-  
-  <header id="header">
-
-    <center><img id="logo" src="https://static1.squarespace.com/static/56fa928b3c44d83bd95b7f3e/t/571b77732b8ddefbf1604dd2/1499779723531/"></center><br>
-    <nav id="nav-bar">
-      <a class="nav-link" href="#philosophy">PHILOSOPHY</a>
-      <a class="nav-link" href="#rums">RUMS</a>
-      <a class="nav-link" href="#cocktails">COCKTAILS</a>
-      <a class="nav-link" href="#newsletter">NEWSLETTER</a>
+  <header class="header" id="header">
+    <nav class="leftnav">
+        <img src="http://www.logodust.com/img/free/logo38.png" alt="company logo" id="header-img">
     </nav>
-      
-    <img id="header-img" class="img-responsive" src="https://farm5.staticflickr.com/4313/35875799881_045ba6f109.jpg">
-
-  </header>
-
+    <nav class="rightnav" id="nav-bar">
+        <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#features" class="nav-link">FEATURES</a>
+        <a href="#choose" class="nav-link">CHOOSE YOUR OWN</a>
+    </nav>
+</header>
+<body>
   <div id="about">
-    <h1 id="fusion">FUSION HEADPHONE</h1>
+    <center><img id="logo" src="http://www.housemusicpodcasts.co.uk/wp-content/uploads/2012/09/Pioneer-DJ-Logo.jpg"></center>
       <div class="resp-container">
-      <iframe class="resp-iframe"id="video"src="https://www.youtube.com/embed/Ci3y7I-7IhY"frameborder="0"allow="autoplay; encrypted-media"allowfullscreen></iframe>
+      <iframe class="resp-iframe"id="video"src="https://www.youtube.com/embed/dCbRYieYwWI"frameborder="0"allow="autoplay; encrypted-media"allowfullscreen></iframe>
       </div>    
-    
   </div>
   <div id="features">
     <p>Why choose this product?</p>
     <div id="col">
       <div id="col1">
-        <p>Enjoy more music, more comfort, and colours that fit seamlessly into your world. The hear on 2 Wireless NC features High-Resolution Audio for studio-quality sound, plus better BLUETOOTH® streaming with LDAC™. Digital Noise Cancelling blocks out the exterior world, or lets in the sounds you want to hear.</p>
+        <p>It’s been 15 years since the genesis of Pioneer’s first CDJ deck, which led to the world-beating CDJ-1000 series.Now it’s time for something completely new. Introducing a major leap forward for the club standard CDJ series: the CDJ-2000 – our new professional player for the digital age.</p>
       </div>
       <div id="col2">
-        <img id="headphone" src="https://images-na.ssl-images-amazon.com/images/I/61Bz59pNI3L._SY355_.jpg">
+        <img id="decks" src="https://live.staticflickr.com/4496/23680129138_f313dfae24_b.jpg">
       </div>
     </div>
   </div>
@@ -286,8 +244,4 @@ box-shadow: 0 2px 0 rgba(255, 255, 255, 0.6) inset;
   Created by Sean Brady
 </footer>
 <div>
-
-      </html>
-      
-    
-  
+</html>
